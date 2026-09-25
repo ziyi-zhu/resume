@@ -78,21 +78,22 @@
 \experience{Slingshot AI}{New York, United States}
 {Member of Technical Staff}{Nov. 2024 -- Present}
 \begin{itemize}
-    \item Led end-to-end development of a psychology foundation model, spanning \textbf{pre-training} on human therapy transcripts, \textbf{supervised fine-tuning} on golden conversations curated by clinical teams, and \textbf{alignment} using annotator-labelled preference datasets via policy optimisation algorithms such as DPO, PPO, and GRPO.
-    \item Built the training stack from data preparation and cleaning through multi-GPU distributed training; scaled SFT and DPO to \textbf{16k context} on \textbf{122B-parameter} models with PEFT.
-    \item Developed value models to predict user engagement and retention metrics, applying offline RL against the learned value functions for a \textbf{25\% increase in user engagement} (words spoken per session).
-    \item Developed new training methods, including synthetic preference data selected by learned value functions and adversarial training for realistic user simulation (DIAL), enabling offline evaluation and multi-turn policy optimisation.
-    \item Led design and development of an agentic prompt optimisation system (SAGE) in which agents perform diagnostic code execution and propose targeted prompt changes, driving a \textbf{+13.7\% D1 retention improvement} over the quarter.
-    \item Developed CyclicJudge, a round-robin assignment of LLM judges to evaluation scenarios that recovers panel-mean scores at single-judge cost, mitigating judge bias in model evaluation.
+    \item Led end-to-end development of a psychology foundation model, spanning \textbf{pre-training} on human therapy transcripts, \textbf{supervised fine-tuning} on golden conversations curated by clinical teams, and \textbf{alignment} using annotator-labelled preference datasets with DPO, PPO, and GRPO.
+    \item Built the training stack from data preparation and cleaning through multi-GPU distributed training, using TRL and verl for RL; scaled SFT and DPO to \textbf{16k context} on \textbf{122B-parameter} models with PEFT.
+    \item Deployed language models and reward models (token- and sequence-classification) with vLLM and TensorRT, serving both production traffic and development workloads.
+    \item Trained value models to predict user engagement and retention metrics, applying offline RL against the learned value functions for a \textbf{25\% increase in user engagement} (words spoken per session).
+    \item Introduced training methods, including synthetic preference data selected by learned value functions and adversarial training for realistic user simulation (DIAL), enabling offline evaluation and multi-turn policy optimisation.
+    \item Led the design and development of an agentic prompt optimisation system (SAGE) in which agents perform diagnostic code execution and propose targeted prompt changes, driving a \textbf{+13.7\% D1 retention improvement} over the quarter.
+    \item Designed CyclicJudge, a round-robin assignment of LLM judges to evaluation scenarios that recovers panel-mean scores at single-judge cost, mitigating judge bias in model evaluation.
     \item Improved voice turn-taking by training a Whisper-based audio endpointing model to detect end of turn, \textbf{reducing interruption rates by 70\%} at equivalent latency.
-    \item Developed internal tooling for annotation workflows and benchmark creation using TypeScript and Kotlin.
+    \item Built internal tooling for annotation workflows and benchmark creation using TypeScript and Kotlin.
 \end{itemize}
 
 \experience{Unlikely AI}{London, United Kingdom}
 {Senior Applied Scientist}{Jan. 2023 -- Nov. 2024}
 \begin{itemize}
     \item Architected core components of a neurosymbolic AI platform combining LLMs with symbolic reasoning, prioritising accuracy, trustworthiness, and explainability for high-stakes decision-making in regulated industries.
-    \item Built semantic parsing and entity resolution models, achieving \textbf{50\% improvement} over open-source alternatives through transformer fine-tuning on synthetic datasets for insurance and financial services applications.
+    \item Built semantic parsing and entity resolution models, achieving a \textbf{50\% improvement} over open-source alternatives through transformer fine-tuning on synthetic datasets for insurance and financial services applications.
     \item Redesigned the symbolic language layer by integrating LLMs with symbolic solvers, delivering \textbf{99\% precision} on tasks with \textbf{90\% cost reduction}; this technology formed the foundation of the platform sold to Lloyds Banking Group.
     \item Reduced reasoning complexity by optimising ontological reasoning with imitation and reinforcement learning, enabling real-time inference at scale.
 \end{itemize}
@@ -120,7 +121,6 @@
 \begin{itemize}
     \item Optimised Stock Borrow Loan (SBL) desk operations through automated trade booking, position reconciliation, and settlement.
     \item Developed analytical tools on the Advanced Cloud Quantitative Analytics (ACQA) platform for repo rate curve construction, collateral valuation, and securities pricing models.
-    \item Enhanced dividend futures marking efficiency through curve-fitting methods, including spline interpolation and bootstrapping for market-implied interest rate and forward dividend yield extraction.
 \end{itemize}
 
 % Publications Section
@@ -161,7 +161,8 @@
 
 % Skills Section
 \section{SKILLS \& INTERESTS}
-\textbf{LLM Training:} PyTorch, HuggingFace Transformers, TRL, DeepSpeed, vLLM; post-training (SFT, DPO, PPO, GRPO); PEFT (LoRA, QLoRA)\par\vspace{-0.3\baselineskip}
+\textbf{LLM Training:} PyTorch, Hugging Face Transformers, TRL, verl, DeepSpeed; post-training (SFT, DPO, PPO, GRPO); PEFT (LoRA, QLoRA)\par\vspace{-0.3\baselineskip}
+\textbf{LLM Inference:} vLLM, TensorRT\par\vspace{-0.3\baselineskip}
 \textbf{Programming:} Python, TypeScript, JavaScript, Kotlin, Java, C++, SQL, Flutter, React, MATLAB\par\vspace{-0.3\baselineskip}
 \textbf{Domains:} Natural Language Processing, Computer Vision, Diffusion Models, Audio Processing (speech endpointing \& generation)\par\vspace{-0.3\baselineskip}
 \textbf{Classical ML \& Vision:} XGBoost, LightGBM, OpenCV, scikit-learn, image segmentation, depth estimation\par\vspace{-0.3\baselineskip}
