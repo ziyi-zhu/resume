@@ -1,0 +1,162 @@
+\documentclass[10pt,a4paper]{article}
+
+% Required packages
+\usepackage[left=0.5in,right=0.5in,top=0.5in,bottom=0.5in]{geometry}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{times}
+\usepackage[T1]{fontenc}  % Better font encoding
+\usepackage{parskip}
+
+% Remove paragraph indentation
+\setlength{\parindent}{0pt}
+
+% Define colors
+\definecolor{linkblue}{RGB}{0,0,255}
+
+% Hyperref settings
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    urlcolor=linkblue,
+    pdftitle={Professional CV}
+}
+
+% Custom commands for personal info
+\newcommand{\name}[1]{\begin{center}\textbf{\Large #1}\end{center}}
+\newcommand{\contactinfo}[4]{
+    \begin{center}
+    Mobile: #1 $\,\vert\,$ Email: \href{mailto:#2}{#2} $\,\vert\,$ LinkedIn: \href{https://#3}{#3}\\\vspace{1pt}
+    Website: \href{https://#4}{#4} $\,\vert\,$ Portfolio: \href{https://portfolio.ziyizhu.com/}{portfolio.ziyizhu.com}
+    \end{center}
+}
+
+% Section formatting
+\titleformat{\section}
+{\large\bfseries}
+{}
+{0em}
+{}
+[\titlerule]
+
+\titlespacing{\section}
+{0pt}  % left margin
+{12pt} % space before
+{6pt}  % space after
+
+% Standard itemize settings
+\setlist[itemize]{
+    leftmargin=0.2in,
+    label=$\bullet$,
+    topsep=3pt,
+    itemsep=0pt,
+    parsep=0pt
+}
+
+% Header info command
+\newcommand{\headerinfo}[2]{%
+    \textit{#1}\hfill #2\par\vspace{-0.5\baselineskip}%
+}
+
+% Experience entry command
+\newcommand{\experience}[4]{%
+    \textbf{#1}\hfill #2\par\vspace{-0.5\baselineskip}%
+    \textit{#3}\hfill #4\par\vspace{-0.5\baselineskip}%
+}
+
+\begin{document}
+
+% Header
+\name{ZIYI ZHU}
+\contactinfo{(+44) 7510069634}{zhu.ziyi@outlook.com}{linkedin.com/in/ziyizhu}{ziyizhu.com}
+
+% Work Experience Section
+\section{WORK EXPERIENCES}
+\experience{Slingshot AI}{New York, United States}
+{Member of Technical Staff}{Nov. 2024 -- Present}
+\begin{itemize}
+    \item Led full end-to-end development of a foundation model on psychology,  including \textbf{pre-training} on human therapy transcripts, \textbf{supervised fine-tuning} on golden conversations curated by clinical teams, and \textbf{alignment} using annotator-labelled preference datasets via policy optimisation algorithms such as DPO, PPO, and GRPO.
+    \item Engineered scalable training infrastructure with hands-on experience in data preparation, cleaning, and multi-GPU distributed training; scaled SFT and DPO to \textbf{16k context} on \textbf{122B parameter} models using PEFT techniques.
+    \item Developed value models to predict user engagement and retention metrics, applying offline RL optimisation against learned value functions to achieve \textbf{25\% increase in user engagement} as measured by words spoken per session.
+    \item Pioneered innovative training methods, including synthetic preference datasets selected by learned value functions, and adversarial training for realistic user simulation, enabling robust offline evaluation and multi-turn policy optimisation.
+    \item Led design and development of an agentic prompt optimisation system in which agents perform diagnostic code execution and propose targeted prompt changes, driving a \textbf{+13.7\% D1 retention improvement} over the quarter.
+    \item Spearheaded initiatives to improve voice turn-taking experience; trained an audio-based endpointing model built on Whisper to detect end of turn, \textbf{reducing interruption rates by 70\%} at equivalent latency targets.
+    \item Developed internal tooling for annotation workflows and benchmark creation using TypeScript and Kotlin.
+    \item First author of ``DIAL: Direct Iterative Adversarial Learning for Realistic Multi-Turn Dialogue Simulation'' (\href{https://arxiv.org/abs/2512.20773}{arXiv:2512.20773}), ``SAGE: Stochastic Prompt Optimization via Agent-Guided Exploration'' (\href{https://arxiv.org/abs/2606.18902}{arXiv:2606.18902}), and ``CyclicJudge: Mitigating Judge Bias Efficiently in LLM-based Evaluation'' (\href{https://arxiv.org/abs/2603.01865}{arXiv:2603.01865}); all published at EMNLP 2026.
+\end{itemize}
+
+\experience{Unlikely AI}{London, United Kingdom}
+{Senior Applied Scientist}{Jan. 2023 -- Nov. 2024}
+\begin{itemize}
+    \item Architected core components of an advanced neurosymbolic AI platform combining LLMs with symbolic reasoning, prioritising accuracy, trustworthiness, and explainability for high-stakes decision-making in regulated industries.
+    \item Engineered state-of-the-art semantic parsing and entity resolution models, achieving \textbf{50\% improvement} over open-source alternatives through transformer fine-tuning on synthetic datasets for insurance and financial services applications.
+    \item Revolutionised symbolic language design by integrating LLMs with symbolic solvers, delivering \textbf{99\% precision} on tasks with \textbf{90\% cost reduction}; this technology formed the foundation of the platform sold to Lloyds Banking Group.
+    \item Achieved significant reduction in reasoning complexity through sophisticated optimisation of ontological reasoning using imitation learning and reinforcement learning techniques, enabling real-time inference at scale.
+\end{itemize}
+
+\experience{Chai Research}{Palo Alto, United States}
+{Founding AI Researcher}{Dec. 2021 -- Nov. 2022}
+\begin{itemize}
+    \item Pioneered the development of a breakthrough social AI platform from inception to achieving \textbf{200k+ daily active users} and \textbf{1M+ daily messages}, establishing one of the largest real-world LLM deployments at the time.
+    \item Drove \textbf{60\% D1 retention} through LLM fine-tuning and advanced prompt engineering on curated conversational datasets, along with user-centric research and implementation of \textbf{20+ app features} in Flutter.
+    \item Implemented sophisticated encoder-based reward models trained on human preference data with rejection sampling, \textbf{doubling user engagement} as measured by median conversation length.
+    \item Developed and deployed an offline reinforcement learning pipeline using PPO to maximise user engagement, pioneering RLHF techniques for social AI applications.
+    \item Orchestrated large-scale deployment of cutting-edge LLMs on CoreWeave GPU clusters, building robust inference infrastructure serving hundreds of models across thousands of GPUs.
+    \item Co-authored ``Rewarding Chatbots for Real-World Engagement with Millions of Users'' (\href{https://arxiv.org/abs/2303.06135}{arXiv:2303.06135}).
+\end{itemize}
+
+\experience{Seamless Capital}{Cambridge, United Kingdom}
+{Quantitative Researcher}{Aug. 2021 -- Jan. 2022}
+\begin{itemize}
+    \item Developed sophisticated machine learning models (GBDT, MLP, transformers, and ensemble methods) for multi-market horse racing prediction, including Win/Place/Quinella, deployed in live automated trading on Betfair exchange.
+    \item Engineered \textbf{50+ alpha signals} and specialised features through comprehensive historical data analysis, time-series feature extraction, and odds-implied probability calibration, resulting in \textbf{10\% P\&L improvement}.
+    \item Implemented rigorous back-testing infrastructure with cross-validation, walk-forward optimisation, and Monte Carlo simulation for risk analysis, validated through Sharpe ratio, drawdown metrics, and live market execution performance.
+\end{itemize}
+
+\experience{UBS Group AG}{London, United Kingdom}
+{Financing Quant Intern}{June 2021 -- Aug. 2021}
+\begin{itemize}
+    \item Optimised Stock Borrow Loan (SBL) desk operations through automated trade booking, position reconciliation, and settlement.
+    \item Developed sophisticated analytical tools on the Advanced Cloud Quantitative Analytics (ACQA) platform for repo rate curve construction, collateral valuation, and securities pricing models.
+    \item Enhanced dividend futures marking efficiency through innovative curve fitting methodologies, including spline interpolation and bootstrapping for market-implied interest rate and forward dividend yield extraction.
+\end{itemize}
+
+% Education Section
+\section{EDUCATION}
+\experience{University of Cambridge, Christ's College}{Cambridge, United Kingdom}
+{Master of Arts}{May 2025}
+\headerinfo{Bachelor of Arts, Engineering}{Oct. 2018 -- June 2021}
+\begin{itemize}
+    \item Results: First Class Honours, ranking in the \textbf{top 4\%} (\textbf{12th} out of \textbf{288} students), securing the prestigious Christ's College Scholarship for \textbf{three consecutive years}.
+    \item Modules: Information and Computer Engineering, Electrical and Information Sciences, and Instrumentation and Control.
+    \item Achievements: Christ's College Art Prize 2021, CUES Hackathon Champion 2021, VOMG Most Promising Musician 2017, and dual Silver Awards in Singapore Physics Olympiad (2014, 2016).
+\end{itemize}
+
+% Activity Section
+\section{ACTIVITIES}
+\experience{Smartathon (Smart City Challenge) by Saudi Data \& AI Authority (SDAIA)}{Riyadh, Saudi Arabia}
+{Second Prize Winner}{Apr. 2023}
+\begin{itemize}
+    \item Secured \textbf{2nd place} among \textbf{14,731} teams globally, earning SAR \textbf{97,500} in prize money and presenting the solution at Riyadh.
+    \item Developed an advanced pothole severity classification system combining YOLOv5 for real-time 2D object detection and DiffNet for monocular depth estimation and precise 3D surface reconstruction, enabling automated road maintenance optimisation.
+\end{itemize}
+
+\headerinfo{Personal Projects}{}
+\begin{itemize}
+    \item Engineered and deployed a profitable tennis match prediction system on Betfair, consistently achieving \textbf{\textasciitilde{}5\%} daily returns.
+    \item Derived closed-form probability model for stop-limit order execution using Optional Stopping Theorem and exponential martingales on geometric Brownian motion, validated through Monte Carlo simulations, achieving \textbf{<1\%} relative error.
+\end{itemize}
+
+% Skills Section
+\section{SKILLS \& INTERESTS}
+\textbf{Languages:} Chinese (Native), English (Fluent), Japanese (Beginner)\par\vspace{-0.3\baselineskip}
+\textbf{Programming:} Python, TypeScript, JavaScript, Kotlin, Java, C++, SQL, Flutter, React, MATLAB\par\vspace{-0.3\baselineskip}
+\textbf{Machine Learning:} LLM training \& inference (PyTorch, HuggingFace Transformers, TRL, DeepSpeed, vLLM); PEFT techniques (LoRA, QLoRA); RLHF methods (DPO, PPO, GRPO)\par\vspace{-0.3\baselineskip}
+\textbf{Domains:} Natural Language Processing, Computer Vision, Diffusion Models, Audio Processing (speech endpointing \& generation)\par\vspace{-0.3\baselineskip}
+\textbf{Classical ML \& Vision:} XGBoost, LightGBM, OpenCV, scikit-learn, image segmentation, depth estimation\par\vspace{-0.3\baselineskip}
+\textbf{Infrastructure:} Distributed training (multi-node, multi-GPU), Docker, Kubernetes, GCP, AWS, Weights \& Biases, Nebius Cloud\par\vspace{-0.3\baselineskip}
+\textbf{Hobbies:} Percussive fingerstyle guitar, piano, drum set, visual art, oil painting, photography, pool, tennis, table tennis, and travel
+
+\end{document}
