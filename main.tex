@@ -30,7 +30,7 @@
 \newcommand{\contactinfo}[4]{
     \begin{center}
     Mobile: #1 $\,\vert\,$ Email: \href{mailto:#2}{#2} $\,\vert\,$ LinkedIn: \href{https://#3}{#3}\\\vspace{1pt}
-    Website: \href{https://#4}{#4} $\,\vert\,$ Portfolio: \href{https://portfolio.ziyizhu.com/}{portfolio.ziyizhu.com}
+    Website: \href{https://#4}{#4} $\,\vert\,$ Portfolio: \href{https://portfolio.ziyizhu.com/}{portfolio.ziyizhu.com} $\,\vert\,$ \href{https://scholar.google.com/citations?user=wR-Ssa4AAAAJ}{Google Scholar}
     \end{center}
 }
 
@@ -78,12 +78,12 @@
 \experience{Slingshot AI}{New York, United States}
 {Member of Technical Staff}{Nov. 2024 -- Present}
 \begin{itemize}
-    \item Led full end-to-end development of a foundation model on psychology, including \textbf{pre-training} on human therapy transcripts, \textbf{supervised fine-tuning} on golden conversations curated by clinical teams, and \textbf{alignment} using annotator-labelled preference datasets via policy optimisation algorithms such as DPO, PPO, and GRPO.
-    \item Engineered scalable training infrastructure with hands-on experience in data preparation, cleaning, and multi-GPU distributed training with TRL and verl; scaled SFT and DPO to \textbf{16k context} on \textbf{122B-parameter} models using PEFT techniques.
-    \item Deployed language models and reward models (token- and sequence-classification) with vLLM and TensorRT, serving both production traffic and development workloads.
-    \item Developed value models to predict user engagement and retention metrics, applying offline RL optimisation against learned value functions to achieve \textbf{25\% increase in user engagement} as measured by words spoken per session.
-    \item Developed new training methods, including synthetic preference datasets selected by learned value functions, and adversarial training for realistic user simulation, enabling offline evaluation and multi-turn policy optimisation.
-    \item Led design and development of an agentic prompt optimisation system in which agents perform diagnostic code execution and propose targeted prompt changes, driving a \textbf{+13.7\% D1 retention improvement} over the quarter.
+    \item Led full end-to-end development of a foundation model on psychology, including \textbf{continual pre-training} on human therapy transcripts, \textbf{supervised fine-tuning} on golden conversations curated by clinical teams, and \textbf{alignment} on annotator-labeled preference datasets via offline and online policy optimization algorithms such as DPO and GRPO.
+    \item Engineered scalable training infrastructure with hands-on experience in data preparation, cleaning, and multi-GPU distributed training with TRL and verl; scaled single-node training to \textbf{16k context} on \textbf{122B-parameter} models using PEFT techniques.
+    \item Deployed language models and reward models (token and sequence classification) with vLLM and TensorRT with autoscaling in a managed Kubernetes cluster, serving both production traffic and development workloads.
+    \item Developed value models to predict long-term outcomes and user behavioral signals, applying multi-objective RL optimization to \textbf{improve D1--D7 retention by \textasciitilde{}3\%} while increasing positive behaviors and therapeutic-process markers in production.
+    \item Developed novel training methods, including synthetic preference datasets selected by learned value functions, and adversarial training for realistic user simulation, enabling offline evaluation and multi-turn policy optimization.
+    \item Led design and development of an agentic prompt optimization system in which agents perform diagnostic code execution and propose targeted prompt changes, driving a \textbf{14\% D1 retention improvement} over the quarter.
     \item Led initiatives to improve voice turn-taking experience; trained an audio-based endpointing model built on Whisper to detect end of turn, \textbf{reducing interruption rates by 70\%} at equivalent latency targets.
     \item Developed internal tooling for annotation workflows and benchmark creation using TypeScript and Kotlin.
 \end{itemize}
@@ -91,34 +91,34 @@
 \experience{Unlikely AI}{London, United Kingdom}
 {Senior Applied Scientist}{Jan. 2023 -- Nov. 2024}
 \begin{itemize}
-    \item Architected core components of a neurosymbolic AI platform combining LLMs with symbolic reasoning, prioritising accuracy, trustworthiness, and explainability for high-stakes decision-making in regulated industries.
+    \item Architected core components of a neurosymbolic AI platform combining LLMs with symbolic reasoning, prioritizing accuracy, trustworthiness, and explainability for high-stakes decision-making in regulated industries.
     \item Engineered semantic parsing and entity resolution models, achieving \textbf{50\% improvement} over open-source alternatives through transformer fine-tuning on synthetic datasets for insurance and financial services applications.
     \item Redesigned the symbolic language by integrating LLMs with symbolic solvers, delivering \textbf{99\% precision} on tasks with \textbf{90\% cost reduction}; this technology formed the foundation of the platform sold to Lloyds Banking Group.
-    \item Achieved significant reduction in reasoning complexity through optimisation of ontological reasoning using imitation learning and reinforcement learning techniques, enabling real-time inference at scale.
+    \item Achieved significant reduction in reasoning complexity through optimization of ontological reasoning using imitation learning and reinforcement learning techniques, enabling real-time inference at scale.
 \end{itemize}
 
 \experience{Chai Research}{Palo Alto, United States}
 {Founding AI Researcher}{Dec. 2021 -- Nov. 2022}
 \begin{itemize}
     \item Built a social AI platform from inception to achieving \textbf{200k+ daily active users} and \textbf{1M+ daily messages}, establishing one of the largest real-world LLM deployments at the time.
-    \item Drove \textbf{60\% D1 retention} through LLM fine-tuning and prompt engineering on curated conversational datasets, along with user-centric research and implementation of \textbf{20+ app features} in Flutter.
-    \item Implemented encoder-based reward models trained on human preference data with rejection sampling, \textbf{doubling user engagement} as measured by median conversation length.
-    \item Developed and deployed an offline reinforcement learning pipeline using PPO to maximise user engagement, an early application of RLHF to social AI.
-    \item Orchestrated large-scale deployment of LLMs on CoreWeave GPU clusters, building inference infrastructure serving hundreds of models across thousands of GPUs.
+    \item Achieved \textbf{60\% D1 retention} through LLM fine-tuning and prompt engineering on curated conversational datasets, along with user-centric research and implementation of \textbf{20+ app features} in Flutter.
+    \item Implemented encoder-based reward models trained on human preference data using rejection sampling, which \textbf{doubled user engagement} by increasing median conversation length by 100\%.
+    \item Designed, built, and deployed an offline reinforcement learning pipeline using PPO to maximize user engagement, marking one of the earliest successful applications of RLHF to social AI products at scale.
+    \item Orchestrated the large-scale deployment of LLMs across CoreWeave GPU clusters, building high-throughput inference infrastructure that successfully served hundreds of models on thousands of GPUs with high availability.
 \end{itemize}
 
 \experience{Seamless Capital}{Cambridge, United Kingdom}
 {Quantitative Researcher}{Aug. 2021 -- Jan. 2022}
 \begin{itemize}
     \item Developed machine learning models (GBDT, MLP, transformers, and ensemble methods) for multi-market horse racing prediction, including Win/Place/Quinella, deployed in live automated trading on Betfair exchange.
-    \item Engineered \textbf{50+ alpha signals} and specialised features through historical data analysis, time-series feature extraction, and odds-implied probability calibration, resulting in \textbf{10\% P\&L improvement}.
-    \item Implemented back-testing infrastructure with cross-validation, walk-forward optimisation, and Monte Carlo simulation for risk analysis, validated through Sharpe ratio, drawdown metrics, and live market execution performance.
+    \item Engineered \textbf{50+ alpha signals} and specialized features through historical data analysis, time-series feature extraction, and odds-implied probability calibration, resulting in \textbf{10\% P\&L improvement}.
+    \item Implemented back-testing infrastructure with cross-validation, walk-forward optimization, and Monte Carlo simulation for risk analysis, validated through Sharpe ratio, drawdown metrics, and live market execution performance.
 \end{itemize}
 
 \experience{UBS Group AG}{London, United Kingdom}
 {Financing Quant Intern}{June 2021 -- Aug. 2021}
 \begin{itemize}
-    \item Optimised Stock Borrow Loan (SBL) desk operations through automated trade booking, position reconciliation, and settlement.
+    \item Optimized Stock Borrow Loan (SBL) desk operations through automated trade booking, position reconciliation, and settlement.
     \item Developed analytical tools on the Advanced Cloud Quantitative Analytics (ACQA) platform for repo rate curve construction, collateral valuation, and securities pricing models.
 \end{itemize}
 
@@ -149,7 +149,7 @@
 {Second Prize Winner}{Apr. 2023}
 \begin{itemize}
     \item Secured \textbf{2nd place} among \textbf{14,731} teams globally, earning SAR \textbf{97,500} in prize money and presenting the solution at Riyadh.
-    \item Developed a pothole severity classification system combining YOLOv5 for real-time 2D object detection and DiffNet for monocular depth estimation and 3D surface reconstruction, enabling automated road maintenance optimisation.
+    \item Developed a pothole severity classification system combining YOLOv5 for real-time 2D object detection and DiffNet for monocular depth estimation and 3D surface reconstruction, enabling automated road maintenance optimization.
 \end{itemize}
 
 \headerinfo{Personal Projects}{}
@@ -162,10 +162,11 @@
 \section{SKILLS \& INTERESTS}
 \textbf{Languages:} Chinese (Native), English (Fluent), Japanese (Beginner)\par\vspace{-0.3\baselineskip}
 \textbf{Programming:} Python, TypeScript, JavaScript, Kotlin, Java, C++, SQL, Flutter, React, MATLAB\par\vspace{-0.3\baselineskip}
-\textbf{Machine Learning:} LLM training \& inference (PyTorch, Hugging Face Transformers, TRL, verl, DeepSpeed, vLLM, TensorRT); PEFT techniques (LoRA, QLoRA)\par\vspace{-0.3\baselineskip}
+\textbf{LLM Training \& Inference:} PyTorch, Hugging Face Transformers, TRL, verl, DeepSpeed, vLLM, TensorRT, PEFT techniques (LoRA, QLoRA)\par\vspace{-0.3\baselineskip}
 \textbf{Domains:} Natural Language Processing, Computer Vision, Diffusion Models, Audio Processing (speech endpointing \& generation)\par\vspace{-0.3\baselineskip}
 \textbf{Classical ML \& Vision:} XGBoost, LightGBM, OpenCV, scikit-learn, image segmentation, depth estimation\par\vspace{-0.3\baselineskip}
 \textbf{Infrastructure:} Distributed training (multi-node, multi-GPU), Docker, Kubernetes, GCP, AWS, Weights \& Biases, Nebius Cloud\par\vspace{-0.3\baselineskip}
 \textbf{Hobbies:} Percussive fingerstyle guitar, piano, drum set, visual art, oil painting, photography, pool, tennis, table tennis, and travel
 
 \end{document}
+
