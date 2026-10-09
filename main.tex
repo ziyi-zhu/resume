@@ -14,12 +14,11 @@
 \setlength{\parindent}{0pt}
 
 % Define colors
-\definecolor{linkblue}{RGB}{0,0,255}
+\definecolor{linkblue}{HTML}{2563EB}
 
 % Hyperref settings
 \hypersetup{
     colorlinks=true,
-    linkcolor=black,
     urlcolor=linkblue,
     pdftitle={Ziyi Zhu -- CV},
     pdfauthor={Ziyi Zhu}
@@ -29,7 +28,7 @@
 \newcommand{\name}[1]{\begin{center}\textbf{\Large #1}\end{center}}
 \newcommand{\contactinfo}[4]{
     \begin{center}
-    Mobile: #1 $\,\vert\,$ Email: \href{mailto:#2}{#2} $\,\vert\,$ LinkedIn: \href{https://#3}{#3}\\\vspace{1pt}
+    Mobile: #1 $\,\vert\,$ Email: \href{mailto:#2}{#2} $\,\vert\,$ LinkedIn: \href{https://#3}{#3}\\
     Website: \href{https://#4}{#4} $\,\vert\,$ Portfolio: \href{https://portfolio.ziyizhu.com/}{portfolio.ziyizhu.com} $\,\vert\,$ \href{https://scholar.google.com/citations?user=wR-Ssa4AAAAJ}{Google Scholar}
     \end{center}
 }
@@ -50,21 +49,20 @@
 % Standard itemize settings
 \setlist[itemize]{
     leftmargin=0.2in,
-    label=$\bullet$,
-    topsep=3pt,
+    topsep=0pt,
     itemsep=0pt,
     parsep=0pt
 }
 
 % Header info command
 \newcommand{\headerinfo}[2]{%
-    \textit{#1}\hfill #2\par\vspace{-0.5\baselineskip}%
+    \\\textit{#1}\hfill #2%
 }
 
 % Experience entry command
 \newcommand{\experience}[4]{%
-    \textbf{#1}\hfill #2\par\vspace{-0.5\baselineskip}%
-    \textit{#3}\hfill #4\par\vspace{-0.5\baselineskip}%
+    \textbf{#1}\hfill #2\\
+    \textit{#3}\hfill #4%
 }
 
 \begin{document}
@@ -154,12 +152,18 @@
 
 % Skills Section
 \section{SKILLS \& INTERESTS}
-\textbf{Languages:} Chinese (Native), English (Fluent), Japanese (Beginner)\par\vspace{-0.3\baselineskip}
-\textbf{Programming:} Python, TypeScript, JavaScript, Kotlin, Java, C++, SQL, Flutter, React, MATLAB\par\vspace{-0.3\baselineskip}
-\textbf{LLM Training \& Inference:} PyTorch, Hugging Face Transformers, Accelerate, TRL, verl, DeepSpeed, FSDP, FlashAttention, PEFT techniques (LoRA, QLoRA), vLLM, TensorRT\par\vspace{-0.3\baselineskip}
-\textbf{Domains:} Natural Language Processing, Computer Vision, Diffusion Models, Audio Processing (speech endpointing \& generation)\par\vspace{-0.3\baselineskip}
-\textbf{Classical ML \& Vision:} XGBoost, LightGBM, OpenCV, scikit-learn, image segmentation, depth estimation\par\vspace{-0.3\baselineskip}
-\textbf{Infrastructure:} Distributed training (multi-node, multi-GPU), Docker, Kubernetes, GCP, AWS, Weights \& Biases, Nebius Cloud\par\vspace{-0.3\baselineskip}
+\textbf{Languages:} Chinese (Native), English (Fluent), Japanese (Beginner)
+
+\textbf{Programming:} Python, TypeScript, JavaScript, Kotlin, Java, C++, SQL, Flutter, React, MATLAB
+
+\textbf{LLM Training \& Inference:} PyTorch, Hugging Face Transformers, Accelerate, TRL, verl, DeepSpeed, FSDP, FlashAttention, PEFT techniques (LoRA, QLoRA), vLLM, TensorRT
+
+\textbf{Domains:} Natural Language Processing, Computer Vision, Diffusion Models, Audio Processing (speech endpointing \& generation)
+
+\textbf{Classical ML \& Vision:} XGBoost, LightGBM, OpenCV, scikit-learn, image segmentation, depth estimation
+
+\textbf{Infrastructure:} Distributed training (multi-node, multi-GPU), Docker, Kubernetes, GCP, AWS, Weights \& Biases, Nebius Cloud
+
 \textbf{Hobbies:} Percussive fingerstyle guitar, piano, drum set, visual art, oil painting, photography, pool, tennis, table tennis, and travel
 
 \end{document}
